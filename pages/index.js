@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -6,13 +6,14 @@ import styled from "styled-components";
 
 export default function Home() {
   const router = useRouter();
-  const { userName } = router.query;
+
   return (
     <Wrapper>
       <Contents>
-        <Title1>졸업 전에 뿌리고 가는</Title1>
+        <Title1>졸업 전에</Title1>
+        <Title1>뿌리는</Title1>
         <Title2>홍대 맛집 족보</Title2>
-        <Link href="/question_food">
+        <Link href="/question">
           <StartBtn>맛집 추천 시작</StartBtn>
         </Link>
       </Contents>
@@ -21,36 +22,39 @@ export default function Home() {
 }
 
 const Wrapper = styled.div`
-  font-size: 3rem;
   min-height: 100vh;
-  background-color: Azure;
+  padding: 3rem 3rem;
+  background-color: rgb(170, 240, 209);
 `;
 
 const Contents = styled.div`
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 20px;
-  margin: 40px auto;
+  padding: 1rem 2rem;
+  margin: 2rem auto;
+  width: 70%;
 `;
 
 const Title1 = styled.p`
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   margin: 1rem auto;
 `;
 const Title2 = styled.p`
   color: red;
-  font-size: 3rem;
+  font-weight: bold;
+  font-size: 2rem;
   text-align: center;
   margin: 1rem auto 5rem auto;
 `;
 
 const StartBtn = styled.button`
-  font-size: 2rem;
+  font-size: 0.7rem;
   margin: 0 auto;
-  width: 15rem;
-  height: 4rem;
+  width: 6rem;
+  height: 3rem;
   border: none;
   border-radius: 0.3rem;
   background: pink;
