@@ -21,19 +21,19 @@ export default function QuestionPrice(props) {
       <Lists>
         <Title>얼마 정도 원해?</Title>
         <SelectList>
-          <Btn onClick={nextStep} name="L5">
+          <Btn onClick={nextStep} name="00">
             돈이 없어 ㅠ<br />( ~5,000원 )
           </Btn>
-          <Btn onClick={nextStep} name="O5L8">
+          <Btn onClick={nextStep} name="01">
             밥 먹을 돈은 있어!
             <br />( 5,000원 ~ 8,000원 )
           </Btn>
-          <Btn onClick={nextStep} name="O8L10">
+          <Btn onClick={nextStep} name="02">
             사치 좀 부려볼까~?
             <br />( 8,000원 ~ 10,000원 )
           </Btn>
-          <Btn onClick={nextStep} name="O10">
-            FLEX!!!!!!
+          <Btn onClick={nextStep} name="03">
+            FLEX~~~!!!!!!
             <br />( 10,000원 ~ )
           </Btn>
         </SelectList>
@@ -71,7 +71,7 @@ const Lists = styled.div`
 const Btn = styled.button`
   font-size: 1.5rem;
   margin: 10px auto;
-  width: 16rem;
+  width: 18rem;
   height: 4rem;
   border: none;
   border-radius: 0.3rem;

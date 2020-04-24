@@ -29,7 +29,7 @@ export default function Home() {
           addUserData={SetUserSelection}
         />
       )}
-      {questionNum == 2 && <BeforeResult />}
+      {questionNum == 2 && <BeforeResult userData={userSelection} />}
     </Wrapper>
   );
 }

@@ -19,19 +19,19 @@ export default function QuestionFoodType(props) {
       <Lists>
         <Title>너 뭐 좋아해??</Title>
         <SelectList>
-          <Btn onClick={nextStep} name="Korean">
+          <Btn onClick={nextStep} name="K">
             한식
           </Btn>
-          <Btn onClick={nextStep} name="Chinese">
+          <Btn onClick={nextStep} name="C">
             중식
           </Btn>
-          <Btn onClick={nextStep} name="Japanese">
+          <Btn onClick={nextStep} name="J">
             일식
           </Btn>
-          <Btn onClick={nextStep} name="EastSouth">
+          <Btn onClick={nextStep} name="T">
             동남아
           </Btn>
-          <Btn onClick={nextStep} name="ETC">
+          <Btn onClick={nextStep} name="E">
             기타
           </Btn>
         </SelectList>

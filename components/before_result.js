@@ -5,14 +5,16 @@ import Link from "next/link";
 
 export default function BeforeResult(props) {
   const router = useRouter();
-  const { userName } = router.query;
-  const { changeQuestion } = props;
-
+  const { userData } = props;
+  const { Price, FoodType } = userData;
   return (
     <Wrapper>
-      <Link href="/result">
+      <Link href={`/result?price=${Price}&foodType=${FoodType}`}>
         <Lists>
-          <Title>결과를 보려면 눌러주세요!</Title>
+          <Title>
+            결과를 보려면 <br />
+            눌러주세요!
+          </Title>
         </Lists>
       </Link>
     </Wrapper>
