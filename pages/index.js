@@ -17,12 +17,18 @@ export default function Home() {
           <StartBtn>맛집 추천 시작</StartBtn>
         </Link>
       </Contents>
+      1. 배포 환영
+      <br />
+      2. 수정 금지
+      <br />
+      3. 상업적 이용 금지
+      <br />
+      4. 피드백 환영(minsj141@gmail.com)
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
-  min-height: 100vh;
   padding: 3rem 3rem;
   background-color: rgb(170, 240, 209);
 `;
@@ -32,9 +38,9 @@ const Contents = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   margin: 2rem auto;
-  width: 70%;
+  width: 90%;
 `;
 
 const Title1 = styled.p`
