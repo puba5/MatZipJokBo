@@ -8,8 +8,6 @@ import QuestionFoodType from "../components/question_foodtype";
 import BeforeResult from "../components/before_result";
 
 export default function Home() {
-  const router = useRouter();
-  const { userName } = router.query;
   const [questionNum, setQuestionNum] = useState(0);
   const [userSelection, SetUserSelection] = useState({ FoodType: "", Price: "" });
 

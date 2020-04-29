@@ -1,12 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import styled from "styled-components";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <Wrapper>
       <Contents>
@@ -17,13 +14,15 @@ export default function Home() {
           <StartBtn>맛집 추천 시작</StartBtn>
         </Link>
       </Contents>
+      {`<홍대맛집족보 0.0.1>`}
+      <br />
       1. 배포 환영
       <br />
       2. 수정 금지
       <br />
       3. 상업적 이용 금지
       <br />
-      4. 피드백 환영(minsj141@gmail.com)
+      4. 피드백 환영- 오픈카톡방(https://open.kakao.com/o/g7KKlQ8b)
     </Wrapper>
   );
 }

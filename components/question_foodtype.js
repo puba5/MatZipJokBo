@@ -29,7 +29,7 @@ export default function QuestionFoodType(props) {
             일식
           </Btn>
           <Btn onClick={nextStep} name="E">
-            기타
+            그 외 나라
           </Btn>
         </SelectList>
       </Lists>

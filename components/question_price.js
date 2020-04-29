@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 export default function QuestionPrice(props) {
   const router = useRouter();
-  const { userName } = router.query;
   const { changeQuestion, addUserData, userData } = props;
 
   const nextStep = (e) => {
@@ -22,11 +20,11 @@ export default function QuestionPrice(props) {
         <Title>얼마 정도 원해?</Title>
         <SelectList>
           <Btn onClick={nextStep} name="00">
-            돈이 없어 ㅠ<br />( ~5,000원 )
+            돈이 없어 ㅠ<br />( ~6,000원 )
           </Btn>
           <Btn onClick={nextStep} name="01">
             밥 먹을 돈은 있어!
-            <br />( 5,000원 ~ 8,000원 )
+            <br />( 6,000원 ~ 8,000원 )
           </Btn>
           <Btn onClick={nextStep} name="02">
             사치 좀 부려볼까~?
