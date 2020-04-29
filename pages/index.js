@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
-
+import ReactGA from "react-ga";
 import styled from "styled-components";
+import Router from "next/router";
+
+Router.onRouteChangeComplete = (url) => {
+  console.log("주소 변경", url);
+  const pathName = window.location.pathname;
+  //console.log(window);
+  ReactGA.initialize("UA-164936400-1");
+  ReactGA.set({ page: pathName });
+  ReactGA.pageview(pathName);
+};
 
 export default function Home() {
+  useEffect(() => {
+    getGA();
+  }, []);
+  const getGA = () => {
+    console.log("페이지 들어옴");
+    const pathName = window.location.pathname;
+    ReactGA.initialize("UA-164936400-1");
+    ReactGA.set({ page: pathName });
+    ReactGA.pageview(pathName);
+  };
   return (
     <Wrapper>
       <Contents>
