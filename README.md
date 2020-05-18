@@ -1,5 +1,8 @@
 # MatZipZoa Front Page
 
+- React를 이용한 프론트 페이지
+- Zeit을 이용하여 배포
+
 ## 실행 방법
 
 ```
