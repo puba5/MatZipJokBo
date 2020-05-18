@@ -4,13 +4,13 @@ import Tr from "./tr";
 import styled from "styled-components";
 
 export default function Table(props) {
-  const { tableData } = props;
+  const { tableData, dispatch } = props;
   return (
     <Wrapper>
       {Array(tableData.length)
         .fill()
         .map((tr, i) => (
-          <Tr rowData={tableData[i]} />
+          <Tr rowData={tableData[i]} rowIndex={i} dispatch={dispatch} />
         ))}
     </Wrapper>
   );

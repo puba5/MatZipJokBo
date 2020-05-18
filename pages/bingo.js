@@ -27,13 +27,22 @@ const reducer = (state, action) => {
           ["", "", ""],
         ],
       };
+    case CLICK_CELL:
+      const tableData = { ...state.tableData };
+      tableData[action.row] = [...state.tableData[action.row]];
+      tableData[action.row][action.cell] = "";
+      return {
+        ...state,
+        tableData,
+      };
   }
 };
 
-const SET_TABLE_DATA = "SET_TABLE_DATA";
+export const SET_TABLE_DATA = "SET_TABLE_DATA";
+export const CLICK_CELL = "CLICK_CELL";
 
 export default function Bingo() {
-  const [state, setState] = useReducer(reducer, initalState);
+  const [state, dispatch] = useReducer(reducer, initalState);
 
   // action을 생성
   const onClickTable = useCallback(() => {
@@ -51,7 +60,7 @@ export default function Bingo() {
     <Wrapper>
       <Lists>
         <Title>홍대 맛집 빙고</Title>
-        <Table onClick={onClickTable} tableData={state.tableData} />
+        <Table onClick={onClickTable} tableData={state.tableData} dispatch={dispatch} />
       </Lists>
     </Wrapper>
   );
