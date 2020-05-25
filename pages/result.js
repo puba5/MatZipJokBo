@@ -98,14 +98,10 @@ export default function QuestionResult() {
       <Lists>
         <Title>
           그럼 너는
-          <a href={restaurantInfo.link}>{restaurantInfo.name}</a>
+          {""} <a href={restaurantInfo.link}>{restaurantInfo.name}</a>
           (이)야!
         </Title>
-        <FoodImg
-          src={restaurantInfo.img}
-          alt={`사진이 없어요 ㅠ
-        사진기부해주세요`}
-        ></FoodImg>
+        <FoodImg src={restaurantInfo.img} alt={`음식 사진`}></FoodImg>
       </Lists>
     </Wrapper>
   );

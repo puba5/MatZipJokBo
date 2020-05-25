@@ -30,11 +30,16 @@ export default function Home() {
         <Title1>졸업 전에</Title1>
         <Title1>뿌리는</Title1>
         <Title2>홍대 맛집 족보</Title2>
-        <Link href="/question">
-          <StartBtn>맛집 추천 시작</StartBtn>
-        </Link>
+        <Buttons>
+          <Link href="/bingo">
+            <StartBtn>홍대 맛집 빙고</StartBtn>
+          </Link>
+          <Link href="/question">
+            <StartBtn>맛집 추천 시작</StartBtn>
+          </Link>
+        </Buttons>
       </Contents>
-      {`<홍대맛집족보 0.0.1>`}
+      {`<홍대맛집족보 0.0.2>`}
       <br />
       1. 배포 환영
       <br />
@@ -83,4 +88,9 @@ const StartBtn = styled.button`
   border: none;
   border-radius: 0.3rem;
   background: pink;
+`;
+
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

@@ -10,22 +10,22 @@ export default function BeforeResult(props) {
   const [tmiContent, setTmiContent] = useState("생각하는 중이에요...🤔");
 
   // axios를 이용하여 데이터 가져옴
-  const getTmi = async () => {
-    const tmiNumber = Math.floor(Math.random() * 16);
-    try {
-      const data = await axios
-        .get(process.env.API_HOST + `/GET/tmi/${tmiNumber}`, {
-          params: {},
-        })
-        .then(function (response) {
-          return response.data;
-        });
-      console.log(data);
-      setTmiContent(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getTmi = async () => {
+  //   const tmiNumber = Math.floor(Math.random() * 16);
+  //   try {
+  //     const data = await axios
+  //       .get(process.env.API_HOST + `/GET/tmi/${tmiNumber}`, {
+  //         params: {},
+  //       })
+  //       .then(function (response) {
+  //         return response.data;
+  //       });
+  //     console.log(data);
+  //     setTmiContent(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   const getTmiLocal = () => {
     const tmiNumber = Math.floor(Math.random() * 16);
     const tmiList = [

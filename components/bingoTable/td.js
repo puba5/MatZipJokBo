@@ -19,18 +19,18 @@ export default function Td(props) {
 const Wrapper = styled.div``;
 
 const NotSelected = styled.div`
-  border: 2px solid black;
-  width: 8rem;
-  height: 8rem;
-  font-size: 2rem;
+  border: 1px solid black;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.2rem;
   background-color: white;
   padding-top: 15%;
 `;
 const Selected = styled.div`
-  border: 2px solid black;
-  width: 8rem;
-  height: 8rem;
-  font-size: 2rem;
+  border: 1px solid black;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.2rem;
   background-color: pink;
   color: black;
   padding-top: 15%;

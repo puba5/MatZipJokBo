@@ -12,11 +12,11 @@ const initalState = {
   ],
 
   bingoContent: [
-    ["", "", "", "", ""],
-    ["", "김피라", "카미야", `무라🍜`, ""],
-    ["", "아웃닭", "또보겠지떡볶이", "가미우동", ""],
-    ["", "사모님돈까스", "식스티즈버거🍔", "윤씨밀방", ""],
-    ["", "", "", "", ""],
+    ["다락투", "더피자보이즈🍕", "향미", "지지고", "김덕후의곱창고"],
+    ["블랙스톤🍖", "김피라", "카미야", `무라🍜`, "박용석스시"],
+    ["카이화", "아웃닭", "또보겠지떡볶이", "가미우동", "뉴오더클럽"],
+    ["테이스티버거", "사모님돈까스", "식스티즈버거🍔", "윤씨밀방", "빤닭빤닭"],
+    ["진만두🥟", "히메시야", "초마", "우산", "미식당🍚"],
   ],
 };
 
@@ -72,8 +72,8 @@ export default function Bingo() {
   return (
     <Wrapper>
       <Lists>
-        <Title>홍대 맛집 빙고</Title>
-        <Description>홍대생이면 이 정도는 가봤어야하는거 아니냐?</Description>
+        <Title>🏫 홍대 맛집 빙고 🍔</Title>
+        <Description>너 홍대 다니면서 여기도 안가봤어?</Description>
         <Table
           onClick={onClickTable}
           tableData={state.tableData}
@@ -89,19 +89,19 @@ const Wrapper = styled.div`
   font-size: 3rem;
   min-height: 100vh;
   background-color: rgb(170, 240, 209);
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
 `;
 
 const Title = styled.p`
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: center;
-  margin: 3rem;
+  margin: 1.5rem;
 `;
 
 const Description = styled.p`
-  font-size: 2rem;
+  font-size: 1.2rem;
   text-align: center;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 `;
 
 const Lists = styled.div`
