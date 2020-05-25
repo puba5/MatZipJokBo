@@ -1,17 +1,22 @@
-import React, { useState, useReducer, useCallback } from "react";
+import React, { useReducer, useCallback } from "react";
 import styled from "styled-components";
 import Table from "../components/bingoTable/table";
 
 const initalState = {
   tableData: [
-    ["", "", ""],
-    ["", "", ""],
-    ["", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
+    ["", "", "", "", ""],
   ],
-  tableCheck: [
-    ["", "", ""],
-    ["", "", ""],
-    ["", "", ""],
+
+  bingoContent: [
+    ["", "", "", "", ""],
+    ["", "김피라", "카미야", `무라🍜`, ""],
+    ["", "아웃닭", "또보겠지떡볶이", "가미우동", ""],
+    ["", "사모님돈까스", "식스티즈버거🍔", "윤씨밀방", ""],
+    ["", "", "", "", ""],
   ],
 };
 
@@ -22,15 +27,21 @@ const reducer = (state, action) => {
       return {
         ...state,
         tableData: [
-          ["", "", ""],
-          ["", "", ""],
-          ["", "", ""],
+          ["", "", "", "", ""],
+          ["", "", "", "", ""],
+          ["", "", "", "", ""],
+          ["", "", "", "", ""],
+          ["", "", "", "", ""],
         ],
       };
     case CLICK_CELL:
-      const tableData = { ...state.tableData };
-      tableData[action.row] = [...state.tableData[action.row]];
-      tableData[action.row][action.cell] = "";
+      console.log(action.cell);
+      console.log(state.tableData);
+      const tableData = [...state.tableData];
+      console.log(tableData);
+      tableData[action.row] = [...tableData[action.row]];
+      tableData[action.row][action.cell] = "O";
+      console.log(tableData);
       return {
         ...state,
         tableData,
@@ -49,9 +60,11 @@ export default function Bingo() {
     dispatch({
       type: SET_TABLE_DATA,
       tableData: [
-        ["", "", ""],
-        ["", "", ""],
-        ["", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
+        ["", "", "", "", ""],
       ],
     });
   }, []);
@@ -60,7 +73,13 @@ export default function Bingo() {
     <Wrapper>
       <Lists>
         <Title>홍대 맛집 빙고</Title>
-        <Table onClick={onClickTable} tableData={state.tableData} dispatch={dispatch} />
+        <Description>홍대생이면 이 정도는 가봤어야하는거 아니냐?</Description>
+        <Table
+          onClick={onClickTable}
+          tableData={state.tableData}
+          dispatch={dispatch}
+          bingoContent={state.bingoContent}
+        />
       </Lists>
     </Wrapper>
   );
@@ -74,9 +93,15 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.p`
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem;
+`;
+
+const Description = styled.p`
   font-size: 2rem;
   text-align: center;
-  margin: 5rem auto;
+  margin: 2rem auto;
 `;
 
 const Lists = styled.div`
@@ -85,4 +110,5 @@ const Lists = styled.div`
   justify-content: space-between;
   text-align: center;
   margin: auto;
+  align-items: center;
 `;
