@@ -70,11 +70,11 @@ page 기능을 이용하여 메인페이지-index, 설문-question, 결과페이
 
 ### 2. 맛집 빙고
 
-![bingo](./docs/image/bingo_main.png)
+![bingo](./docs/image/bingo_main.png){: width="60%" height="60%"}
 
 ```
 https://mat-zip-zoa-front.puba5.now.sh/bingo
 
 useReducer을 이용하여 빙고의 데이터를 관리
-현재 bingo table의 최하위 컴포넌트인 td.js에서 클릭을 할 경우 bingo.js의 state 데이터 값을 변경시키고, 그에 따라 컴포넌트이 배경 색 변경
+현재 bingo table의 최하위 컴포넌트인 td.js에서 클릭을 할 경우 bingo.js의 state 데이터 값을 변경시키고, 그에 따라 컴포넌트의 배경 색 변경
 ```
