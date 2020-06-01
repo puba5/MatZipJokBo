@@ -70,7 +70,7 @@ page 기능을 이용하여 메인페이지-index, 설문-question, 결과페이
 
 ### 2. 맛집 빙고
 
-![bingo](./docs/image/bingo_main.png){: width="60%" height="60%"}
+<img src ="./docs/image/bingo_main.png" width="60%" height="60%">
 
 ```
 https://mat-zip-zoa-front.puba5.now.sh/bingo
