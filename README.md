@@ -65,8 +65,11 @@ https://mat-zip-zoa-front.puba5.now.sh/question
 page 기능을 이용하여 메인페이지-index, 설문-question, 결과페이지-result를 나눔
 설문 결과에 따라 url 쿼리 분류를 하여 결과를 보여줌
 현재는 js 코드 내에 데이터를 저장하지만, 추후 axios를 이용하여 web api를 이용하여 데이터를 받을 예정
-이를 대비하여 로딩 중에는 다른 메세지를 출력하도록 구현
 ```
+
+#### axios로 데이터를 받아올 때, 받아오는 속도가 늦을 수 있어 로딩 중에는 다른 메세지를 출력하도록 구현
+
+<img src ="./docs/image/loading_thinking.png" width="30%" height="30%">
 
 ### 2. 맛집 빙고
 
